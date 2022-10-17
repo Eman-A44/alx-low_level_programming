@@ -1,30 +1,23 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 /**
- *  * main - assign a random number to the variable n each time it is executed
- *   * if the number is greater than 0: is positive, if the number is 0: is zero
- *    * if the number is less than 0: is negative, followed by a new line
- *     * Return: 0
+ *  * main - Entry point
+ *   *
+ *    * Return: Always 0 (Success)
 */
 int main(void)
 {
 int n;
-int lastn;
+int L;
+char str[] = "Last digit of";
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-lastn = n % 10;
-if (lastn > 5)
-{
-	printf("Last digit of %d is %d and is greater than 5\n", n, lastn);
-}
-else if (lastn == 0)
-{
-	printf("Last digit of %d is %d and is 0\n", n, lastn);
-}
-else if (lastn < 6 && lastn != 0)
-{
-	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastn);
-}
+L = n % 10;
+if (L > 5)
+printf("%s %d is %d and is greater than 5\n", str, n, L);
+else if (L == 0)
+printf("%s %d is %d and is 0\n", str, n, L);					else if (L < 6)					
+printf("%s %d is %d and is less than 6 and not 0\n", str, n, L);
 return (0);
 }

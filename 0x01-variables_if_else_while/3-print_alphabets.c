@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <ctype.h>
-/*
- * 
- * *  *Description program that prints the alphabet in lowercase, followed by a new line
+
+/**
+ * Description program that prints the alphabet in lowercase, followed by a new line
  *   * You can only use the putchar
  *    * Return: 0
  *     */

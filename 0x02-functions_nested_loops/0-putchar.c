@@ -1,4 +1,4 @@
-#include"main.c"
+#include"main.h"
 /**
  *  * main - Entry point
  *   *
@@ -6,11 +6,13 @@
  *     */
 int main(void)
 {
-char *sh = "_putchar";
-while (*sh)
+int n = 0;
+char str_hbt[8] = "_putchar";
+while (n < 9)
 {
-	_putchar(*sh);
-	h++;
+	_putchar(str_hbt[n]);
+	n += 1;
 }
-_putchar('\n');return (0);
+_putchar('\n');
+return (0);
 }

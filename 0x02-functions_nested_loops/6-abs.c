@@ -4,9 +4,9 @@
  *   * @n: The input number to check
  *    * Return: int
 */
-int print_sign(int n)
+int _abs(int x)
 {
-if (n > 0)
+if (x < 0)
 {
 	x = x * (-1);
 	return (x);

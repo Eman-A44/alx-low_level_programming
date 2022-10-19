@@ -3,11 +3,11 @@
  *  * main - Entry point
  *   *
  *    * Return: Always 0 (Success)
- *     */
+*/
 int main(void)
 {
 int n = 0;
-char str_hbt[8] = "_putchar";
+char str_hbt[9] = "_putchar";
 while (n < 9)
 {
 	_putchar(str_hbt[n]);

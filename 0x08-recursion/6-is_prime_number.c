@@ -12,6 +12,13 @@ if (n <= 1)
 	return (0);
 return (getNumPrim(n, 2));
 }
+/**
+ *  * getNumPrim - function that gets if num is 0 or 1
+ *   *
+ *    * @num: input number
+ *     * @i: Counter variable
+ *      * Return: int
+*/
 int getNumPrim(int num, int i)
 {
 if (num == i)

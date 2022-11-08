@@ -1,26 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <ctype.h>
 /**
- *  * check_digit - checks if a given char is number or not
- *   * @a: input char
- *    * Return: int
+ *  * main - adds positive numbers.
+ *   * @argc: number of command line arguments.
+ *    * @argv: array that contains the program command line arguments.
+ *     * Return: 0 - success.
 */
-int check_digit(char *a)
+int main(int argc, char *argv[])
 {
-int i, num, len;
-i = 0;
-num = 0;
-len = strlen(a);
-while (i < len)
+int i, j, add = 0;
+for (i = 1; i < argc; i++)
 {
-	if (a[i] < '0' || a[i] > '9')
+	for (j = 0; argv[i][j] != '\0'; j++)
 	{
-		return (-1);
+		if (!isdigit(argv[i][j]))
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
-	else
-		num = num * 10 + (a[i] - '0');
-	i++;
+	add += atoi(argv[i]);
 }
-return (num);
+printf("%d\n", add);
+return (0);
 }
